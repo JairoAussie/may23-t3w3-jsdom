@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
+    <script src="./themeControl.js"></script>
 </head>
 <body>
     <h1>Welcome!</h1>
@@ -19,9 +20,16 @@
 
     </ul>
 
+    <button onClick="changeCSSTheme('dark')">Change theme to dark</button>
+
+    <button onClick="changeCSSTheme('light')">Change theme to light</button>
+
+    <button onClick="toggleLightDark()">Toggle Light/Dark</button>
+
     <script>
         exampleHello();
         createListOfMedia();
+        changeCSSTheme("light");
     </script>
 </body>
 </html>
