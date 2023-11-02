@@ -12,6 +12,8 @@ function exampleHello(){
 
 function createListOfMedia(){
     let rootUlNode = document.querySelector("ul");
+    //clean the list to avoid duplication
+    rootUlNode.innerHTML = "";
     //console.log(rootUlNode);
     favoriteMedia.forEach(mediaItem => {
         //console.log(mediaItem);
@@ -40,3 +42,20 @@ function removeItemFromList(targetItem){
     
     targetItemNode.parentNode.removeChild(targetItemNode);
 }
+
+function addItemToList(event){
+    event.preventDefault();
+    //console.log(event);
+    console.log("we are trying to add an item to the list");
+    let realInputField = document.getElementById("real-nameinput");
+    //console.log(realInputField.value);
+    let newItemName = realInputField.value;
+    favoriteMedia.push(newItemName);
+    
+    createListOfMedia();
+
+}
+
+let realFormSubmitButton = document.getElementById("real-formsubmit");
+console.log(realFormSubmitButton);
+realFormSubmitButton.addEventListener("click", addItemToList);

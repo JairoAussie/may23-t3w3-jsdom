@@ -6,14 +6,23 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-    <script src="./themeControl.js"></script>
+
 </head>
 <body>
     <h1>Welcome!</h1>
     <p>Some subheading goes here</p>
     <hr />
     <br />
+
+    <h2>Real form</h2>
+    <form>
+        <label>New item:</label>
+        <input type="text" id="real-nameinput" />
+        <h6 id="real-texthint">Not sure what to write? check IMDB!</h6>
+        <button id="real-formsubmit">Submit new item</button>
+    </form>
+
+    <hr />
 
     <h2>Favourite Media</h2>
     <ul>
@@ -26,6 +35,8 @@
 
     <button onClick="toggleLightDark()">Toggle Light/Dark</button>
 
+    <script src="./script.js"></script>
+    <script src="./themeControl.js"></script>
     <script>
         exampleHello();
         createListOfMedia();
